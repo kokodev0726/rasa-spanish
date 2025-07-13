@@ -11,11 +11,6 @@ rules:
       - intent: despedida
       - action: utter_despedida
 
-  - rule: Responder afirmación
-    steps:
-      - intent: afirmar
-      - action: utter_confirmacion_positiva
-
   - rule: Responder negación
     steps:
       - intent: negar
