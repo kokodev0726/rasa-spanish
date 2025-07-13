@@ -1,83 +1,948 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: saludo
   examples: |
     - hola
-    - buenas
+    - hola, ¿cómo estás?
     - buenos días
     - buenas tardes
-    - qué tal
-    - saludos
+    - buenas noches
+    - ¿qué tal?
+    - ¿cómo va todo?
+    - ¡ey!
+    - hey, ¿qué onda?
     - hola amigo
+    - hola amiga
+    - hola de nuevo
+    - saludos
+    - saludos cordiales
+    - qué hay
+    - qué pasa
+    - cómo estás hoy
+    - cómo andas
+    - cómo te va
     - hola hola
-    - muy buenas
+    - buenas
+    - bienvenido
+    - qué tal estás
+    - qué más pues
+    - buen día
+    - qué hubo
+    - buenas, ¿qué hay?
+    - cómo está usted
+    - muy buenos días
+    - muy buenas tardes
+    - muy buenas noches
+    - buenas tardes señor
+    - buenas noches señora
+    - buenos días joven
+    - hola, buen día
+    - hola compa
+    - hola, ¿qué se cuenta?
+    - hey, ¿todo bien?
+    - qué gusto verte
+    - qué gusto saludarte
+    - hola crack
+    - qué onda, bro
+    - buenas, ¿todo bien?
+    - ey, ¿cómo va eso?
+    - cómo va la cosa
+    - cómo va la semana
+    - hola, ¿cómo amaneciste?
+    - hola, ¿qué tal tu día?
+    - hey, ¿cómo sigues?
+    - buen día para ti
+    - hola, ¿me recuerdas?
+    - buenos días, ¿cómo amaneciste?
+    - hola, ¿qué hay de nuevo?
+    - qué tal compañero
+    - hola, gusto en saludarte
+    - hola mi pana
+    - buenas, ¿cómo estás hoy?
+    - buenas tardes, ¿cómo te va?
+    - qué hay de nuevo
+    - hola, ¿cómo va la vida?
+    - muy buen día
+    - qué onda wey
+    - buenas noches, ¿todo bien?
+    - buenos días, ¿cómo estuvo tu noche?
+    - buenos días, ¿cómo te sientes?
+    - buenas tardes, ¿cómo estuvo el trabajo?
+    - hola, ¿qué onda contigo?
+    - saludos, ¿cómo estás?
+    - hola jefe
+    - buenas tardes, jefe
+    - hola señorita
+    - buenos días, estimado
+    - hola estimada
+    - hey, ¿qué dice la buena vida?
+    - hola, ¿cómo va el clima por allá?
+    - saludos desde México
+    - hola desde Colombia
+    - buenas desde España
+    - qué tal, chatbot
+    - ey asistente, ¿estás ahí?
+    - hola, ¿me puedes ayudar?
+    - saludo cordial
+    - un saludo
+    - qué tal, ¿cómo estás?
+    - hola, ¿qué tienes para hoy?
+    - buenos días, ¿puedes asistirme?
+    - buen día, ¿todo en orden?
+    - hey, estoy aquí
+    - hey, acabo de llegar
+    - hola, ya estoy conectado
+    - buenas, listo para empezar
+    - hola, he vuelto
+    - buen día, ¿cómo estás tú?
+    - qué hay de interesante hoy
+    - qué tal si hablamos
+    - buenas, ¿en qué estás?
+    - hola, ¿en qué me puedes ayudar hoy?
 
-- intent: goodbye
+
+- intent: despedida
   examples: |
     - adiós
     - hasta luego
     - nos vemos
-    - chao
     - hasta pronto
-    - que tengas un buen día
+    - chao
+    - chau
+    - hasta la próxima
+    - hablamos luego
+    - cuídate
+    - que te vaya bien
+    - buen día
+    - buenas noches
+    - me despido
+    - nos vemos pronto
+    - que estés bien
+    - hasta mañana
+    - hasta otra
+    - nos hablamos
+    - hasta más ver
     - hasta la vista
+    - fue un gusto
+    - un placer hablar contigo
+    - gracias, adiós
+    - gracias, hasta luego
+    - saludos y despedida
+    - hablamos más tarde
+    - chao, cuídate
+    - bueno, me voy
+    - me tengo que ir
+    - me retiro
+    - tengo que salir
+    - debo irme
+    - hasta el lunes
+    - hasta el martes
+    - nos vemos al rato
+    - hablamos en un rato
+    - hasta dentro de un rato
+    - hasta dentro de poco
+    - bye
+    - bye bye
+    - see you
+    - ok, adiós
+    - bueno, gracias, chao
+    - muchas gracias, hasta luego
+    - hasta el próximo chat
+    - hasta la próxima vez
+    - chau chau
+    - adiós amigo
+    - adiós amiga
+    - hablamos luego, gracias
+    - me despido por ahora
+    - seguimos en contacto
+    - que tengas un excelente día
+    - que tengas buen fin de semana
+    - buen finde
+    - que descanses
+    - feliz noche
+    - feliz día
+    - que tengas una linda noche
+    - buena jornada
+    - hasta dentro de un rato
+    - espero hablar pronto
+    - fue útil, gracias, adiós
+    - lo aprecio, hasta luego
+    - gracias por todo, chau
+    - gracias por la ayuda, me retiro
+    - dejo esto por hoy, gracias
+    - hasta luego compañero
+    - hasta luego compañera
+    - chao, que estés bien
+    - chao, gracias
+    - bueno, eso es todo, gracias
+    - listo, gracias, chau
+    - fue genial, hasta luego
+    - terminamos por ahora
+    - cierro sesión, hasta luego
+    - me desconecto, adiós
+    - dejo el chat
+    - hasta pronto asistente
+    - chau bot
+    - nos vemos bot
+    - bye bot
+    - gracias asistente, hasta luego
+    - que pases buena tarde
+    - gracias, fue todo por hoy
+    - gracias, me despido
+    - que sigas bien
+    - hablamos mañana
+    - hasta la siguiente
+    - muy bien, hasta la próxima
+    - que tengas bonito día
+    - gracias por tu atención
+    - hasta luego, buen servicio
+    - gracias por responder, hasta luego
+    - me desconecto por hoy
+    - me retiro del chat
+    - buena atención, gracias
+    - nos vemos más adelante
 
-- intent: affirm
+- intent: pedir_informacion
+  examples: |
+    - me puedes dar información
+    - quiero saber más
+    - dime más detalles
+    - ¿qué me puedes decir?
+    - necesito información
+    - ¿podrías explicarme?
+    - ¿me das más info?
+    - quiero entender esto mejor
+    - dime cómo funciona
+    - ¿cómo es eso?
+    - ¿cómo funciona?
+    - explícame eso
+    - necesito saber más
+    - cuéntame más
+    - quiero conocer más detalles
+    - ¿cómo se hace?
+    - ¿puedes explicarme mejor?
+    - ¿me puedes ayudar con esto?
+    - ¿tienes más información?
+    - quiero más datos
+    - ¿me podrías decir más?
+    - ¿cómo lo hago?
+    - no entendí, ¿puedes explicar?
+    - ¿puedes aclarar eso?
+    - ¿de qué se trata?
+    - ¿para qué sirve eso?
+    - necesito más claridad
+    - ¿puedes ampliar la info?
+    - ¿qué significa eso?
+    - no me quedó claro
+    - ¿puedes detallar más?
+    - ¿puedes explicarlo con ejemplos?
+    - dame detalles
+    - más detalles por favor
+    - necesito saber exactamente cómo es
+    - ¿cómo puedo hacerlo?
+    - explícame con calma
+    - dame una explicación
+    - ¿esto cómo va?
+    - ¿y eso qué es?
+    - ¿qué incluye?
+    - ¿qué cubre?
+    - ¿qué implica?
+    - ¿qué opciones tengo?
+    - ¿puedes contarme cómo es?
+    - ¿cuál es el procedimiento?
+    - ¿cómo empiezo?
+    - ¿me puedes guiar?
+    - ¿me puedes orientar?
+    - ¿qué pasos debo seguir?
+    - ¿puedes explicarlo paso a paso?
+    - ¿qué debo hacer?
+    - ¿cuáles son los requisitos?
+    - ¿me puedes dar los requisitos?
+    - ¿cómo se completa?
+    - ¿cómo me registro?
+    - ¿cómo funciona esto?
+    - ¿puedo ver un ejemplo?
+    - ¿dónde encuentro eso?
+    - ¿en qué consiste?
+    - ¿cómo accedo?
+    - ¿cómo puedo acceder?
+    - ¿hay algo más que deba saber?
+    - ¿cómo puedo usarlo?
+    - ¿cómo lo configuro?
+    - ¿cómo empiezo a usarlo?
+    - ¿qué necesito para empezar?
+    - ¿qué debo tener en cuenta?
+    - ¿cómo me inscribo?
+    - ¿tienes el enlace?
+    - ¿dónde puedo encontrar eso?
+    - ¿dónde está?
+    - ¿cómo llego a eso?
+    - ¿cómo lo encuentro?
+    - ¿cómo busco eso?
+    - ¿qué más debo saber?
+    - ¿hay más detalles?
+    - ¿hay más información disponible?
+    - ¿cómo hago para empezar?
+    - ¿esto tiene algún costo?
+    - ¿cuánto cuesta?
+    - ¿cuánto tiempo toma?
+    - ¿me puedes decir cuánto dura?
+    - ¿hay un límite?
+    - ¿me puedes enviar la info?
+    - ¿puedes darme el enlace?
+    - ¿cómo puedo solicitarlo?
+    - ¿cómo puedo obtenerlo?
+    - ¿hay requisitos previos?
+    - ¿cuál es el primer paso?
+    - ¿cómo inicio el trámite?
+    - ¿cómo hago la solicitud?
+    - ¿cuáles son las condiciones?
+    - ¿esto está disponible?
+    - ¿cómo verifico?
+    - ¿está disponible en mi país?
+    - ¿hay restricciones?
+    - ¿puedes detallar eso?
+    - necesito más info
+    - no entendí, ¿puedes repetir?
+    - ¿qué más me puedes contar?
+    - dame toda la información que tengas
+    - explícame con más calma
+    - ¿tienes documentación?
+    - ¿dónde puedo leer más?
+    - ¿puedo ver los términos?
+    - ¿hay un sitio web?
+    - ¿hay una app?
+    - ¿está disponible online?
+    - ¿cómo puedo verlo?
+    - ¿me podrías enviar la info por favor?
+    - necesito entenderlo bien
+    - ¿cuál es el proceso completo?
+    - ¿me puedes resumir cómo funciona?
+    - ¿puedes decirme los pasos exactos?
+    - ¿puedes mostrarme un ejemplo?
+    - ¿hay tutorial?
+    - ¿puedo acceder al tutorial?
+    - ¿dónde está la guía?
+    - ¿esto es automático?
+    - ¿esto se hace manual?
+    - ¿hay asistencia?
+    - ¿puedes ayudarme con eso?
+    - ¿es difícil?
+    - ¿me va a tomar mucho tiempo?
+    - ¿cómo lo hago si soy nuevo?
+    - ¿tienen soporte?
+    - ¿puedo contactar con alguien?
+    - ¿cómo contacto a soporte?
+    - ¿cuánto tarda en responder?
+    - ¿cómo me comunico con atención?
+    - ¿hay un número?
+    - ¿hay un chat?
+    - ¿puedo usar WhatsApp?
+    - ¿tienen correo?
+    - ¿puedo escribirles?
+    - ¿están disponibles los fines de semana?
+    - ¿responden rápido?
+    - ¿qué otras opciones tengo?
+    - ¿esto es gratis?
+    - ¿hay una versión de prueba?
+    - ¿puedo probarlo primero?
+    - ¿hay garantías?
+    - ¿hay política de devoluciones?
+    - ¿qué hago si no me sirve?
+    - ¿tienen horarios?
+    - ¿cuáles son sus horarios?
+    - ¿cuándo están disponibles?
+    - ¿qué horarios manejan?
+
+- intent: reportar_problema
+  examples: |
+    - no funciona
+    - esto no está funcionando
+    - tengo un problema
+    - algo anda mal
+    - no puedo entrar
+    - no me deja iniciar sesión
+    - no carga la página
+    - me da error
+    - aparece un mensaje de error
+    - no puedo continuar
+    - se queda cargando
+    - no responde
+    - está muy lento
+    - el sistema se cayó
+    - no puedo completar el proceso
+    - me saca del sistema
+    - no reconoce mi usuario
+    - dice que la contraseña es incorrecta
+    - no me deja avanzar
+    - no puedo subir el archivo
+    - no se guarda lo que escribo
+    - no aparece el botón
+    - el botón no hace nada
+    - no se actualiza la información
+    - el sitio está caído
+    - la app se cierra sola
+    - me da un error desconocido
+    - sale error 404
+    - no encuentro lo que busco
+    - el sistema está caído
+    - algo no está bien
+    - no carga nada
+    - todo se queda en blanco
+    - no recibo el correo
+    - no me llegó el código
+    - no puedo validar mi cuenta
+    - no puedo registrarme
+    - no puedo completar el formulario
+    - el sistema no responde
+    - hay un fallo
+    - me da error al pagar
+    - no me deja pagar
+    - no carga el método de pago
+    - me aparece un mensaje raro
+    - me dice que lo intente más tarde
+    - no reconoce mi correo
+    - no puedo recuperar la contraseña
+    - no me llega el correo de recuperación
+    - el enlace no funciona
+    - el link está roto
+    - el botón está deshabilitado
+    - el captcha no carga
+    - se traba la aplicación
+    - me bloquea el acceso
+    - no puedo hacer clic
+    - no puedo seleccionar nada
+    - los menús no funcionan
+    - no me deja modificar nada
+    - no actualiza los datos
+    - se queda congelado
+    - la pantalla se congela
+    - se reinicia solo
+    - se queda en negro
+    - está inestable
+    - se desconecta solo
+    - pierde conexión
+    - no se guarda el progreso
+    - me pide repetir todo
+    - no reconoce mi tarjeta
+    - no me deja terminar el registro
+    - carga incompleta
+    - aparece como error técnico
+    - hay un bug
+    - parece que hay un bug
+    - el sistema me lanza error
+    - me aparece error en el paso 2
+    - no me permite avanzar al siguiente paso
+    - no funciona correctamente
+    - no me da opción de continuar
+    - no se actualiza la página
+    - ya intenté varias veces
+    - reinicié y sigue igual
+    - borré caché y no cambia nada
+    - ya lo intenté todo
+    - nada funciona
+    - esto sigue igual
+    - sigo con el mismo error
+    - intenté desde otro navegador
+    - lo probé en el celular y tampoco
+    - me pasa desde ayer
+    - el problema persiste
+    - necesito que revisen esto
+    - por favor revisen este error
+    - hay un error grave
+    - hay un fallo importante
+    - no carga el dashboard
+    - la app se cierra
+    - me saca de la sesión
+    - se pierde lo que escribo
+    - no puedo guardar los cambios
+    - no me permite actualizar mis datos
+    - hay un error en mi cuenta
+    - aparece información incorrecta
+    - está mostrando mal mis datos
+    - no aparecen los productos
+    - no se muestra el contenido
+    - no carga la sección de ayuda
+    - el botón de contacto no funciona
+    - no me redirige
+    - me manda a una página vacía
+    - se rompe la navegación
+    - error al procesar la solicitud
+    - no se puede conectar al servidor
+    - me dice “error interno”
+    - el código que me dieron no sirve
+    - el link de confirmación no sirve
+    - no aparece el formulario
+    - el campo obligatorio no se puede llenar
+    - no puedo adjuntar archivos
+    - se pierden mis datos
+    - se borra todo lo que escribí
+    - esto no está bien configurado
+    - hay problemas con la interfaz
+    - no me carga el chat
+    - el asistente no responde
+    - no puedo hablar con soporte
+    - se queda esperando
+    - pantalla en blanco
+    - pantalla negra
+    - no funciona ni en el móvil ni en el PC
+    - lo he intentado varias veces sin éxito
+    - por favor ayúdenme con este fallo
+    - qué está pasando con esto
+    - esto no debería pasar
+    - cada vez que lo abro, falla
+    - siempre me da error
+    - esto nunca funciona
+    - ¿pueden ayudarme con este problema?
+    - ¿está fallando el sistema?
+    - ¿hay algún problema general?
+    - ¿el sistema está caído?
+    - ¿están presentando fallos hoy?
+    - ¿hay alguna interrupción?
+    - ¿ustedes lo pueden arreglar?
+    - ¿me pueden ayudar con este error?
+    - ¿pueden revisar por favor?
+    - ¿pueden validar el problema?
+    - ¿es un error conocido?
+    - ¿están trabajando en esto?
+    - tengo este fallo desde temprano
+    - ya han pasado horas y sigue igual
+    - necesito solución urgente
+    - por favor arréglenlo
+    - urge solución
+
+- intent: consultar_estado
+  examples: |
+    - quiero saber el estado de mi pedido
+    - ¿en qué va mi solicitud?
+    - ¿me pueden decir cómo va mi caso?
+    - ¿ya está listo?
+    - ¿ya resolvieron mi problema?
+    - ¿ya enviaron mi paquete?
+    - ¿mi pedido ya salió?
+    - ¿pueden revisar cómo va mi trámite?
+    - quiero consultar el estado de mi reserva
+    - ¿en qué etapa está?
+    - necesito saber cómo va mi reclamo
+    - ¿pueden decirme el estatus?
+    - ¿cómo va el proceso?
+    - ¿en qué punto está mi solicitud?
+    - ¿ya fue aprobado?
+    - ¿ya lo procesaron?
+    - ¿me pueden confirmar si ya está listo?
+    - quiero hacer seguimiento a mi caso
+    - ¿puedo saber cómo va?
+    - ¿ya lo solucionaron?
+    - quiero verificar el estado
+    - necesito revisar el seguimiento
+    - ¿ya fue enviado?
+    - ¿ya lo despacharon?
+    - ¿ya hicieron el envío?
+    - ¿cuándo me llega?
+    - ¿ya está en camino?
+    - ¿en qué estado está mi pedido?
+    - ¿puedo rastrear mi envío?
+    - ¿tienen número de seguimiento?
+    - ¿cuándo se entrega?
+    - ¿pueden verificar el envío?
+    - ¿pueden decirme el avance?
+    - ¿ya lo validaron?
+    - quiero ver el progreso
+    - quiero saber cómo va
+    - ¿ya recibieron mi pago?
+    - ¿se confirmó el pago?
+    - ¿ya está registrado el pago?
+    - ¿está pendiente o completado?
+    - ¿ya tienen respuesta?
+    - ¿ya hay actualización?
+    - ¿alguna novedad?
+    - ¿tienen noticias?
+    - ¿me pueden decir si ya se resolvió?
+    - ¿mi caso sigue abierto?
+    - ¿ya lo cerraron?
+    - ¿todavía lo están revisando?
+    - ¿ya está todo en orden?
+    - ¿cuándo me confirman?
+    - ¿me pueden confirmar si ya se procesó?
+    - quiero saber si fue aceptado
+    - quiero saber si fue aprobado
+    - ¿mi solicitud fue rechazada?
+    - ¿me pueden confirmar el estado?
+    - necesito saber si sigue pendiente
+    - ¿sigue en revisión?
+    - ¿aún lo están procesando?
+    - ¿cuál es el estatus actual?
+    - ¿cuál es el progreso?
+    - ¿en qué parte del proceso está?
+    - ¿ya tienen una respuesta?
+    - ¿cuándo tendré noticias?
+    - ¿me pueden dar una actualización?
+    - ¿tienen un estimado?
+    - ¿cuánto tiempo más debo esperar?
+    - ¿me pueden decir si falta algo?
+    - ¿necesitan algo más para avanzar?
+    - ¿está todo correcto?
+    - ¿ya está confirmado?
+    - ¿ya tengo la cita asignada?
+    - ¿ya está listo mi reporte?
+    - ¿cómo consulto el estado?
+    - ¿cómo puedo verificar el estado?
+    - ¿puedo consultar el avance?
+    - ¿cómo reviso mi solicitud?
+    - quiero hacer seguimiento
+    - quiero saber en qué va eso
+    - ¿cómo sé si ya está?
+    - ¿dónde consulto el estado?
+    - ¿hay alguna novedad sobre mi caso?
+    - ¿ya tienen algo?
+    - ¿han revisado mi solicitud?
+    - ¿cuándo recibiré confirmación?
+    - ¿cuándo sabré algo?
+    - ¿ya completaron el proceso?
+    - ¿cuándo finaliza?
+    - ¿cuándo me notifican?
+    - ¿saben si ya fue resuelto?
+    - ¿en qué estado está el reclamo?
+    - ¿ya hicieron algo con eso?
+    - ¿ya gestionaron mi pedido?
+    - ¿ya se gestionó la solicitud?
+    - ¿ya me asignaron turno?
+    - ¿ya programaron la cita?
+    - ¿ya me llamaron?
+    - estoy esperando respuesta
+    - no he recibido actualización
+    - sigo esperando confirmación
+    - aún no sé nada
+    - no tengo novedades
+    - por favor confirmen el estado
+    - pueden verificar mi trámite
+    - revisen si ya está aprobado
+    - quisiera saber si ya enviaron
+    - no me ha llegado el correo
+    - aún no recibo notificación
+    - ¿cuándo actualizan el estado?
+    - ¿se actualiza en tiempo real?
+    - ¿me avisan por correo?
+    - ¿cómo sé si ya se resolvió?
+    - ¿puedo ver eso online?
+    - ¿está disponible en mi cuenta?
+    - ¿cómo accedo a la información?
+    - ¿cómo reviso mi estado desde la app?
+    - ¿puedo ver eso desde aquí?
+    - ¿me avisan por este medio?
+    - ¿puedo recibir actualizaciones por WhatsApp?
+    - ¿pueden avisarme?
+    - ¿cuándo sabré si fue exitoso?
+    - ¿ya terminó el proceso?
+    - ¿ya lo cerraron?
+    - ¿ya fue gestionado?
+    - ¿está resuelto?
+    - ¿hay algo pendiente?
+    - ¿algo sigue abierto?
+    - quiero saber si falta algo
+    - ¿todo está en orden?
+    - ¿mi solicitud está completa?
+    - ¿pueden confirmar el avance?
+    - ¿todo va bien?
+    - ¿ya hicieron todo lo necesario?
+    - ¿me pueden enviar una actualización?
+    - ¿ya puedo continuar?
+    - ¿ya puedo usar el servicio?
+    - ¿ya está habilitado?
+    - ¿mi cuenta está activada?
+    - ¿el servicio ya está activo?
+    - ¿ya se activó mi suscripción?
+    - ¿cuándo veré reflejado el cambio?
+    - ¿cuándo podré usarlo?
+    - ¿cuándo estará disponible?
+    - ¿ya solucionaron eso?
+    - ¿pueden avisarme cuando esté listo?
+    - ¿cuándo termina el trámite?
+    - ¿cuándo finaliza la revisión?
+    - ¿me pueden decir si falta algo?
+
+- intent: chitchat
+  examples: |
+    # SALUDOS
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - qué tal
+    - cómo estás
+    - hola, ¿me puedes ayudar?
+    - hey
+    - qué onda
+    - holaaa
+    - qué hay
+    - saludos
+
+    # DESPEDIDAS
+    - adiós
+    - nos vemos
+    - hasta luego
+    - muchas gracias, chao
+    - gracias, eso es todo
+    - hablamos luego
+    - me voy
+    - gracias por la ayuda
+    - hasta pronto
+    - buen día
+
+    # AGRADECIMIENTOS Y CORTESÍA
+    - gracias
+    - muchas gracias
+    - mil gracias
+    - se agradece
+    - súper amable
+    - qué amable
+    - te lo agradezco mucho
+    - gracias por responder tan rápido
+    - eres muy útil
+
+    # BOT: PREGUNTAS PERSONALES / CURIOSIDAD
+    - ¿eres un robot?
+    - ¿quién eres?
+    - ¿con quién hablo?
+    - ¿eres una persona real?
+    - ¿eres humano?
+    - ¿cómo te llamas?
+    - ¿tienes nombre?
+    - ¿tienes sentimientos?
+    - ¿te puedo hacer una pregunta personal?
+    - ¿puedes pensar?
+    - ¿eres inteligente?
+    - ¿te crearon con IA?
+
+    # BOT: RESPUESTAS CÓMICAS / JUGUETONAS
+    - ¿puedes contar un chiste?
+    - dime algo divertido
+    - cuéntame algo
+    - entreténme
+    - hazme reír
+    - ¿sabes cantar?
+    - ¿bailas?
+    - ¿tienes novio?
+    - ¿te puedes equivocar?
+
+    # FRASES HUMANAS SIN INTENCIÓN CLARA
+    - ajá
+    - ok
+    - ya veo
+    - entiendo
+    - perfecto
+    - genial
+    - vale
+    - de acuerdo
+    - mmm
+    - bueno...
+
+    # CURIOSIDAD / GENERALIDADES
+    - ¿qué puedes hacer?
+    - ¿cómo me puedes ayudar?
+    - ¿qué servicios ofreces?
+    - ¿me puedes explicar qué haces?
+    - ¿para qué sirve este chat?
+    - ¿cómo funciona esto?
+
+    # REACCIONES POSITIVAS
+    - increíble
+    - wow
+    - qué bien
+    - qué rápido
+    - excelente atención
+    - muy buena respuesta
+    - eso me sirve mucho
+
+    # REACCIONES NEGATIVAS (FRUSTRACIÓN, CONFUSIÓN)
+    - esto no ayuda
+    - no entiendo nada
+    - no me sirve
+    - no era lo que buscaba
+    - esto es inútil
+    - qué mal servicio
+    - no respondes bien
+    - no estás entendiendo
+    - ¿por qué no entiendes?
+
+    # TÍPICO DE REDES SOCIALES / EMOJIS
+    - jaja
+    - lol
+    - xd
+    - 😊
+    - 👍
+    - 👎
+    - 🤔
+    - 😢
+    - 🙏
+    - 😅
+
+    # TONO FAMILIAR
+    - che
+    - oye
+    - amigo
+    - bro
+    - máquina
+    - crack
+
+- intent: pregunta_general
+  examples: |
+    - ¿cuáles son sus horarios?
+    - ¿a qué hora abren?
+    - ¿cuándo están disponibles?
+    - ¿tienen atención los fines de semana?
+    - ¿atienden los sábados?
+    - ¿dónde están ubicados?
+    - ¿tienen sucursales?
+    - ¿cuál es la dirección?
+    - ¿cómo llego?
+    - ¿cuál es su número de teléfono?
+    - ¿cómo puedo contactarlos?
+    - ¿tienen servicio al cliente?
+    - ¿cómo me comunico con ustedes?
+    - ¿tienen correo?
+    - ¿puedo llamar?
+    - ¿tienen WhatsApp?
+    - ¿cuánto cuesta?
+    - ¿cuáles son los precios?
+    - ¿tienen tarifas?
+    - ¿hay promociones?
+    - ¿tienen descuentos?
+    - ¿ofrecen planes mensuales?
+    - ¿qué servicios ofrecen?
+    - ¿qué productos venden?
+    - ¿cómo funciona esto?
+    - ¿qué es este servicio?
+    - ¿para qué sirve esta plataforma?
+    - ¿tienen app?
+    - ¿cómo uso la aplicación?
+    - ¿necesito registrarme?
+    - ¿hay que pagar para usar esto?
+    - ¿es gratis?
+    - ¿cuáles son los requisitos?
+    - ¿qué documentos necesito?
+    - ¿qué debo llevar?
+    - ¿necesito cita previa?
+    - ¿atienden sin cita?
+    - ¿puedo ir directamente?
+    - ¿cómo hago una cita?
+    - ¿puedo cancelar una cita?
+    - ¿puedo modificar mi cita?
+    - ¿puedo reprogramar?
+    - ¿cómo hago para registrarme?
+    - ¿cómo ingreso?
+    - ¿cómo creo mi cuenta?
+    - ¿cómo recupero mi cuenta?
+    - ¿se puede hacer en línea?
+    - ¿lo puedo hacer desde el celular?
+    - ¿tienen atención presencial?
+    - ¿hay atención en línea?
+    - ¿cuánto demora el proceso?
+    - ¿cuánto tarda la entrega?
+    - ¿cuánto tiempo toma?
+    - ¿cuánto me cuesta el envío?
+    - ¿hacen envíos a todo el país?
+    - ¿envían al extranjero?
+    - ¿se puede pagar en cuotas?
+    - ¿aceptan tarjetas?
+    - ¿qué métodos de pago aceptan?
+    - ¿es seguro pagar aquí?
+    - ¿tienen garantía?
+    - ¿cómo es la política de devoluciones?
+    - ¿se puede devolver el producto?
+    - ¿puedo cancelar mi compra?
+    - ¿cuáles son las condiciones?
+    - ¿puedo cambiar el producto?
+    - ¿tienen atención en otros idiomas?
+    - ¿hay límite de edad?
+    - ¿pueden atender a menores?
+    - ¿hay requisitos médicos?
+    - ¿pueden ayudar a personas mayores?
+    - ¿esto aplica para extranjeros?
+    - ¿necesito ser residente?
+    - ¿esto aplica en mi ciudad?
+    - ¿cuáles son las zonas de cobertura?
+    - ¿cuáles son los pasos a seguir?
+    - ¿qué sigue después?
+    - ¿puedo hacer seguimiento?
+    - ¿dónde veo el estado?
+    - ¿cómo sabré si fue aprobado?
+    - ¿puedo recibir actualizaciones?
+    - ¿cómo me notifican?
+    - ¿puedo ver el historial?
+    - ¿cómo accedo a mi información?
+    - ¿qué datos guardan?
+    - ¿pueden eliminar mi información?
+    - ¿cómo cierro mi cuenta?
+    - ¿puedo cambiar mi contraseña?
+    - ¿cómo actualizo mis datos?
+    - ¿cuánto tiempo guardan mis datos?
+    - ¿dónde están los términos y condiciones?
+    - ¿cómo presento un reclamo?
+    - ¿cómo pongo una queja?
+    - ¿puedo hablar con alguien?
+    - ¿puedo hablar con un humano?
+    - ¿tienen soporte humano?
+    - ¿pueden transferirme a un agente?
+    - ¿tienen horario de atención?
+    - ¿cuánto es el tiempo de respuesta?
+    - ¿cómo accedo a soporte técnico?
+    - ¿cómo sé si están disponibles?
+    - ¿dónde puedo leer más información?
+    - ¿tienen redes sociales?
+    - ¿dónde los puedo seguir?
+
+
+- intent: afirmar
   examples: |
     - sí
     - claro
-    - por supuesto
     - correcto
-    - afirmativo
-    - seguro
+    - exacto
+    - así es
+    - por supuesto
 
-- intent: deny
+- intent: negar
   examples: |
     - no
     - para nada
-    - nunca
-    - no creo
-    - no me gusta
-    - de ninguna manera
-    - no realmente
+    - en absoluto
+    - nope
+    - negativo
 
-- intent: mood_great
-  examples: |
-    - perfecto
-    - genial
-    - increíble
-    - me siento como un rey
-    - maravilloso
-    - me siento muy bien
-    - estoy genial
-    - estoy increíble
-    - voy a salvar el mundo
-    - súper emocionado
-    - extremadamente bien
-    - tan perfecto
-    - tan bien
 
-- intent: mood_unhappy
+- intent: pedir_repeticion
   examples: |
-    - mi día fue horrible
-    - estoy triste
-    - no me siento muy bien
-    - estoy decepcionado
-    - súper triste
-    - estoy muy triste
-    - triste
-    - muy triste
-    - infeliz
-    - no bien
-    - no muy bien
-    - extremadamente triste
-    - tan triste
-    - tan triste
+    - ¿puedes repetir?
+    - no entendí
+    - otra vez
+    - ¿cómo fue eso?
+    - ¿qué dijiste?
 
-- intent: bot_challenge
+- intent: pedir_ayuda
   examples: |
-    - ¿eres un bot?
-    - ¿eres humano?
-    - ¿estoy hablando con un bot?
-    - ¿estoy hablando con un humano?
+    - ayuda
+    - necesito ayuda
+    - no sé cómo seguir
+    - ¿qué hago ahora?
+
+
+- intent: hacer_reserva
+  examples: |
+    - quiero reservar una cita
+    - necesito una hora para mañana
+    - me puedes agendar
+
+- intent: cancelar_reserva
+  examples: |
+    - quiero cancelar mi cita
+    - anula la reserva
+    - no voy a poder asistir
+
+- intent: dar_feedback
+  examples: |
+    - el servicio fue excelente
+    - no me gustó la atención
+    - muy buena experiencia
+    - pésimo servicio

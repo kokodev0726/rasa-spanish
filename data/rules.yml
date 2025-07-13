@@ -1,13 +1,57 @@
 version: "3.1"
 
 rules:
+  - rule: Saludo simple
+    steps:
+      - intent: saludo
+      - action: utter_saludo
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Despedida simple
+    steps:
+      - intent: despedida
+      - action: utter_despedida
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Responder afirmación
+    steps:
+      - intent: afirmar
+      - action: utter_confirmacion_positiva
+
+  - rule: Responder negación
+    steps:
+      - intent: negar
+      - action: utter_confirmacion_negativa
+
+  - rule: Pedir ayuda
+    steps:
+      - intent: pedir_ayuda
+      - action: utter_ofrecer_ayuda
+
+  - rule: Pedir repetición
+    steps:
+      - intent: pedir_repeticion
+      - action: utter_repetir_ultimo
+
+  - rule: Manejo out_of_scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_no_entendido
+
+  - rule: Manejo fallback NLU
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+
+  - rule: Confirmar reserva después de pedir detalles
+    steps:
+      - intent: hacer_reserva
+      - action: utter_pedir_detalles_reserva
+
+  - rule: Cancelar reserva - pedir confirmación
+    steps:
+      - intent: cancelar_reserva
+      - action: utter_pedir_confirmacion_cancelacion
+
+  - rule: Consultar estado - pedir datos
+    steps:
+      - intent: consultar_estado
+      - action: utter_pedir_datos_estado
