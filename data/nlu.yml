@@ -101,7 +101,6 @@ nlu:
     - buenas, ¿en qué estás?
     - hola, ¿en qué me puedes ayudar hoy?
 
-
 - intent: despedida
   examples: |
     - adiós
@@ -664,7 +663,6 @@ nlu:
 
 - intent: chitchat
   examples: |
-    # SALUDOS
     - hola
     - buenos días
     - buenas tardes
@@ -677,8 +675,6 @@ nlu:
     - holaaa
     - qué hay
     - saludos
-
-    # DESPEDIDAS
     - adiós
     - nos vemos
     - hasta luego
@@ -689,8 +685,6 @@ nlu:
     - gracias por la ayuda
     - hasta pronto
     - buen día
-
-    # AGRADECIMIENTOS Y CORTESÍA
     - gracias
     - muchas gracias
     - mil gracias
@@ -700,8 +694,6 @@ nlu:
     - te lo agradezco mucho
     - gracias por responder tan rápido
     - eres muy útil
-
-    # BOT: PREGUNTAS PERSONALES / CURIOSIDAD
     - ¿eres un robot?
     - ¿quién eres?
     - ¿con quién hablo?
@@ -714,8 +706,6 @@ nlu:
     - ¿puedes pensar?
     - ¿eres inteligente?
     - ¿te crearon con IA?
-
-    # BOT: RESPUESTAS CÓMICAS / JUGUETONAS
     - ¿puedes contar un chiste?
     - dime algo divertido
     - cuéntame algo
@@ -725,8 +715,6 @@ nlu:
     - ¿bailas?
     - ¿tienes novio?
     - ¿te puedes equivocar?
-
-    # FRASES HUMANAS SIN INTENCIÓN CLARA
     - ajá
     - ok
     - ya veo
@@ -737,16 +725,12 @@ nlu:
     - de acuerdo
     - mmm
     - bueno...
-
-    # CURIOSIDAD / GENERALIDADES
     - ¿qué puedes hacer?
     - ¿cómo me puedes ayudar?
     - ¿qué servicios ofreces?
     - ¿me puedes explicar qué haces?
     - ¿para qué sirve este chat?
     - ¿cómo funciona esto?
-
-    # REACCIONES POSITIVAS
     - increíble
     - wow
     - qué bien
@@ -754,8 +738,6 @@ nlu:
     - excelente atención
     - muy buena respuesta
     - eso me sirve mucho
-
-    # REACCIONES NEGATIVAS (FRUSTRACIÓN, CONFUSIÓN)
     - esto no ayuda
     - no entiendo nada
     - no me sirve
@@ -765,8 +747,6 @@ nlu:
     - no respondes bien
     - no estás entendiendo
     - ¿por qué no entiendes?
-
-    # TÍPICO DE REDES SOCIALES / EMOJIS
     - jaja
     - lol
     - xd
@@ -777,8 +757,6 @@ nlu:
     - 😢
     - 🙏
     - 😅
-
-    # TONO FAMILIAR
     - che
     - oye
     - amigo
@@ -840,7 +818,6 @@ nlu:
     - ¿hay atención en línea?
     - ¿cuánto demora el proceso?
     - ¿cuánto tarda la entrega?
-    - ¿cuánto tiempo toma?
     - ¿cuánto me cuesta el envío?
     - ¿hacen envíos a todo el país?
     - ¿envían al extranjero?
@@ -893,7 +870,6 @@ nlu:
     - ¿tienen redes sociales?
     - ¿dónde los puedo seguir?
 
-
 - intent: afirmar
   examples: |
     - sí
@@ -911,7 +887,6 @@ nlu:
     - nope
     - negativo
 
-
 - intent: pedir_repeticion
   examples: |
     - ¿puedes repetir?
@@ -926,7 +901,6 @@ nlu:
     - necesito ayuda
     - no sé cómo seguir
     - ¿qué hago ahora?
-
 
 - intent: hacer_reserva
   examples: |

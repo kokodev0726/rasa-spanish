@@ -14,7 +14,7 @@ stories:
       - action: utter_saludo
       - intent: pedir_informacion
       - action: utter_informacion_general
-      - intent: preguntar_general
+      - intent: pregunta_general
       - action: utter_pregunta_general
       - intent: despedida
       - action: utter_despedida
