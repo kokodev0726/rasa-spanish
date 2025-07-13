@@ -1,0 +1,26 @@
+version: '3.0'
+
+services:
+  rasa:
+    build: .
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./tests:/app/tests
+      - ./actions:/app/actions
+      - ./data:/app/data
+      - ./domain.yml:/app/domain.yml
+      - ./config.yml:/app/config.yml
+      - ./credentials.yml:/app/credentials.yml
+      - ./endpoints.yml:/app/endpoints.yml
+    depends_on:
+      - action_server
+    command: ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
+
+  action_server:
+    image: rasa/rasa-sdk:3.6.2
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions
+    command: ["python", "-m", "rasa_sdk", "--actions", "actions"]
