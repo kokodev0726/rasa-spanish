@@ -28,15 +28,23 @@ slots:
   fecha_reserva:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
   numero_pedido:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
   nombre_usuario:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
   problema_descripcion:
     type: text
     influence_conversation: false
+    mappings:
+      - type: from_text
 
 responses:
   utter_saludo:
@@ -83,10 +91,8 @@ responses:
 forms:
   reserva_form:
     required_slots:
-      fecha_reserva:
-        - type: from_text
-      numero_pedido:
-        - type: from_text
+      - fecha_reserva
+      - numero_pedido
 
 actions:
   - action_verificar_estado
