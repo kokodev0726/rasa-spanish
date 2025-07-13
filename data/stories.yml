@@ -33,6 +33,7 @@ stories:
       - intent: consultar_estado
       - action: utter_pedir_datos_estado
       - intent: afirmar
+      - action: utter_confirmacion_positiva
       - action: action_verificar_estado
       - action: utter_estado_actual
       - intent: despedida
@@ -70,6 +71,7 @@ stories:
       - intent: hacer_reserva
       - action: utter_pedir_detalles_reserva
       - intent: afirmar
+      - action: utter_confirmacion_positiva
       - action: action_realizar_reserva
       - action: utter_confirmar_reserva
       - intent: despedida
@@ -80,6 +82,7 @@ stories:
       - intent: cancelar_reserva
       - action: utter_pedir_confirmacion_cancelacion
       - intent: afirmar
+      - action: utter_confirmacion_positiva
       - action: action_cancelar_reserva
       - action: utter_confirmar_cancelacion
       - intent: despedida
