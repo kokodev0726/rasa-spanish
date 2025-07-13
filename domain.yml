@@ -1,34 +1,95 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saludo
+  - despedida
+  - pedir_informacion
+  - reportar_problema
+  - consultar_estado
+  - chitchat
+  - pregunta_general
+  - afirmar
+  - negar
+  - pedir_repeticion
+  - pedir_ayuda
+  - hacer_reserva
+  - cancelar_reserva
+  - dar_feedback
+  - out_of_scope
+  - nlu_fallback
+
+entities:
+  - fecha_reserva
+  - numero_pedido
+  - nombre_usuario
+  - problema_descripcion
+
+slots:
+  fecha_reserva:
+    type: text
+    influence_conversation: false
+  numero_pedido:
+    type: text
+    influence_conversation: false
+  nombre_usuario:
+    type: text
+    influence_conversation: false
+  problema_descripcion:
+    type: text
+    influence_conversation: false
 
 responses:
-  utter_greet:
-  - text: "¡Hola! ¿Cómo estás?"
+  utter_saludo:
+    - text: "¡Hola! ¿En qué puedo ayudarte hoy?"
+  utter_despedida:
+    - text: "¡Hasta luego! Que tengas un buen día."
+  utter_informacion_general:
+    - text: "Claro, ¿sobre qué tema necesitas información?"
+  utter_pregunta_general:
+    - text: "¿Podrías especificar tu pregunta, por favor?"
+  utter_agradecer_reporte:
+    - text: "Gracias por reportar el problema. Lo revisaremos pronto."
+  utter_agradecer_feedback:
+    - text: "Agradecemos mucho tus comentarios."
+  utter_pedir_datos_estado:
+    - text: "Por favor, indícame el número de tu pedido o solicitud."
+  utter_estado_actual:
+    - text: "El estado actual de tu solicitud es: {{ estado }}."
+  utter_respuesta_chitchat:
+    - text: "¡Qué bueno que estés charlando conmigo! ¿En qué más te puedo ayudar?"
+  utter_pedir_confirmacion:
+    - text: "¿Confirmas que quieres proceder?"
+  utter_confirmacion_positiva:
+    - text: "Perfecto, continúo con la operación."
+  utter_confirmacion_negativa:
+    - text: "Entendido, cancelamos la operación."
+  utter_ofrecer_ayuda:
+    - text: "Estoy aquí para ayudarte. ¿Qué necesitas?"
+  utter_repetir_ultimo:
+    - text: "Claro, te repito la información anterior."
+  utter_pedir_detalles_reserva:
+    - text: "Por favor, dime la fecha y hora para tu reserva."
+  utter_confirmar_reserva:
+    - text: "Tu reserva ha sido confirmada. ¡Gracias!"
+  utter_pedir_confirmacion_cancelacion:
+    - text: "¿Seguro que quieres cancelar la reserva?"
+  utter_confirmar_cancelacion:
+    - text: "Tu reserva ha sido cancelada."
+  utter_no_entendido:
+    - text: "Disculpa, no entendí lo que quisiste decir."
+  utter_fallback:
+    - text: "No estoy seguro de cómo ayudarte con eso. ¿Quieres intentar de nuevo?"
 
-  utter_cheer_up:
-  - text: "Aquí hay algo para animarte:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+forms:
+  reserva_form:
+    required_slots:
+      fecha_reserva:
+        - type: from_text
+      numero_pedido:
+        - type: from_text
 
-  utter_did_that_help:
-  - text: "¿Eso te ayudó?"
-
-  utter_happy:
-  - text: "¡Genial, sigue así!"
-
-  utter_goodbye:
-  - text: "Adiós"
-
-  utter_iamabot:
-  - text: "Soy un bot, impulsado por Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_verificar_estado
+  - action_realizar_reserva
+  - action_cancelar_reserva
+  - validate_reserva_form
