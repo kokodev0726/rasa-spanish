@@ -1,5 +1,5 @@
 import psycopg2
-from openai.embeddings_utils import get_embedding
+import openai
 
 DB_CONFIG = {
     "dbname": "yourdb",
@@ -9,6 +9,13 @@ DB_CONFIG = {
 }
 
 conn = psycopg2.connect(DB_CONFIG)
+
+def get_embedding(text, model="text-embedding-ada-002"):
+    response = openai.Embedding.create(
+        input=[text],
+        model=model
+    )
+    return response["data"][0]["embedding"]
 
 def save_message(user_id, user_text, bot_reply):
     with conn.cursor() as cur:
