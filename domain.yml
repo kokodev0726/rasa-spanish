@@ -99,3 +99,4 @@ actions:
   - action_realizar_reserva
   - action_cancelar_reserva
   - validate_reserva_form
+  - action_fallback_openai

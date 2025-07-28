@@ -68,6 +68,9 @@ pipeline:
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_fallback_openai"
+    enable_fallback_prediction: True
   - name: UnexpecTEDIntentPolicy
   - name: TEDPolicy
     max_history: 5
