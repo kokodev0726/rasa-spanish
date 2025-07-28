@@ -8,7 +8,7 @@ nlu:
     - buenos días
     - buenas tardes
     - buenas noches
-    - ¿qué tal?
+    - ¿Qué tal?
     - ¿cómo va todo?
     - ¡ey!
     - hey, ¿qué onda?
@@ -385,7 +385,6 @@ nlu:
     - me da un error desconocido
     - sale error 404
     - no encuentro lo que busco
-    - el sistema está caído
     - algo no está bien
     - no carga nada
     - todo se queda en blanco
@@ -469,7 +468,7 @@ nlu:
     - se rompe la navegación
     - error al procesar la solicitud
     - no se puede conectar al servidor
-    - me dice “error interno”
+    - me dice error interno
     - el código que me dieron no sirve
     - el link de confirmación no sirve
     - no aparece el formulario
@@ -750,13 +749,13 @@ nlu:
     - jaja
     - lol
     - xd
-    - 😊
-    - 👍
-    - 👎
-    - 🤔
-    - 😢
-    - 🙏
-    - 😅
+    - ??
+    - ??
+    - ??
+    - ??
+    - ??
+    - ??
+    - ??
     - che
     - oye
     - amigo

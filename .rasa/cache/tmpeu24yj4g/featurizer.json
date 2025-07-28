@@ -1,0 +1,82 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "afirmar": 0,
+        "back": 1,
+        "cancelar_reserva": 2,
+        "chitchat": 3,
+        "consultar_estado": 4,
+        "dar_feedback": 5,
+        "despedida": 6,
+        "hacer_reserva": 7,
+        "negar": 8,
+        "nlu_fallback": 9,
+        "out_of_scope": 10,
+        "pedir_ayuda": 11,
+        "pedir_informacion": 12,
+        "pedir_repeticion": 13,
+        "pregunta_general": 14,
+        "reportar_problema": 15,
+        "restart": 16,
+        "saludo": 17,
+        "session_start": 18
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_verificar_estado": 13,
+        "action_realizar_reserva": 14,
+        "action_cancelar_reserva": 15,
+        "validate_reserva_form": 16,
+        "utter_agradecer_feedback": 17,
+        "utter_agradecer_reporte": 18,
+        "utter_confirmacion_negativa": 19,
+        "utter_confirmacion_positiva": 20,
+        "utter_confirmar_cancelacion": 21,
+        "utter_confirmar_reserva": 22,
+        "utter_despedida": 23,
+        "utter_estado_actual": 24,
+        "utter_fallback": 25,
+        "utter_informacion_general": 26,
+        "utter_no_entendido": 27,
+        "utter_ofrecer_ayuda": 28,
+        "utter_pedir_confirmacion": 29,
+        "utter_pedir_confirmacion_cancelacion": 30,
+        "utter_pedir_datos_estado": 31,
+        "utter_pedir_detalles_reserva": 32,
+        "utter_pregunta_general": 33,
+        "utter_repetir_ultimo": 34,
+        "utter_respuesta_chitchat": 35,
+        "utter_saludo": 36,
+        "reserva_form": 37
+      },
+      "entities": {
+        "fecha_reserva": 0,
+        "nombre_usuario": 1,
+        "numero_pedido": 2,
+        "problema_descripcion": 3
+      },
+      "slots": {},
+      "active_loop": {
+        "reserva_form": 0
+      }
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

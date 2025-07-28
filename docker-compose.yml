@@ -4,7 +4,7 @@ services:
   rasa:
     build: .
     ports:
-      - "5005:5005"
+      - "3003:5005"
     volumes:
       - ./tests:/app/tests
       - ./actions:/app/actions
