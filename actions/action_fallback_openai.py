@@ -16,8 +16,8 @@ class ActionFallbackOpenAI(Action):
         user_msg = tracker.latest_message.get("text")
 
         # 1. Semantic Search
-        # context = semantic_search(user_msg)
-        context = ""
+        context = semantic_search(user_msg)
+
         # 2. OpenAI answer
         prompt = f"Context: {context}\nUser: {user_msg}\nAnswer:" 
         response = openai.ChatCompletion.create(
@@ -30,7 +30,7 @@ class ActionFallbackOpenAI(Action):
         dispatcher.utter_message(answer)
 
         # 4. Save history
-        #save_message(tracker.sender_id, user_msg, answer)
+        save_message(tracker.sender_id, user_msg, answer)
 
         # 5. Optional: Auto intent classification
         result = classify_new_intent(user_msg)
